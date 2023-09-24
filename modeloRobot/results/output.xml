@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230923 21:11:36.169" rpa="false" schemaversion="4">
+<suite id="s1" name="modeloRobot" source="C:\modeloRobot">
+<suite id="s1-s1" name="Aula1-Robot" source="C:\modeloRobot\aula1-robot">
+<suite id="s1-s1-s1" name="Ecommerce" source="C:\modeloRobot\aula1-robot\ecommerce.robot">
+<test id="s1-s1-s1-t1" name="Cenário 1: Preencher login e clicar no botão se Login e adicionar itens no carrinho" line="37">
+<kw name="Dado que eu acesso o site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://www.saucedemo.com/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230923 21:11:37.117" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230923 21:11:37.115" endtime="20230923 21:11:40.103"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:37.114" endtime="20230923 21:11:40.103"/>
+</kw>
+<kw name="E preencher os campos de login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${user_name}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:40.115" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230923 21:11:40.113" endtime="20230923 21:11:40.381"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:40.383" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20230923 21:11:40.381" endtime="20230923 21:11:40.552"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:40.111" endtime="20230923 21:11:40.553"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230923 21:11:42.557" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230923 21:11:40.554" endtime="20230923 21:11:42.559"/>
+</kw>
+<kw name="E clicar no botão de login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:42.566" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230923 21:11:42.563" endtime="20230923 21:11:42.802"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:42.561" endtime="20230923 21:11:42.802"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230923 21:11:44.817" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230923 21:11:42.815" endtime="20230923 21:11:44.818"/>
+</kw>
+<kw name="E adicionar itens no carrinho de compras">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${mochila}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:44.825" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230923 21:11:44.822" endtime="20230923 21:11:44.941"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${lanterna}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:44.942" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20230923 21:11:44.941" endtime="20230923 21:11:45.040"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${tshirt}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:45.042" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20230923 21:11:45.041" endtime="20230923 21:11:45.116"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:45.118" level="INFO">Clicking element 'class:shopping_cart_link'.</msg>
+<status status="PASS" starttime="20230923 21:11:45.117" endtime="20230923 21:11:45.198"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:44.820" endtime="20230923 21:11:45.199"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230923 21:11:47.200" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230923 21:11:45.200" endtime="20230923 21:11:47.200"/>
+</kw>
+<kw name="E clicar em Checkout">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${checkout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:47.205" level="INFO">Clicking element 'id:checkout'.</msg>
+<status status="PASS" starttime="20230923 21:11:47.203" endtime="20230923 21:11:47.307"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:47.202" endtime="20230923 21:11:47.307"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:37.109" endtime="20230923 21:11:47.308"/>
+</test>
+<status status="PASS" starttime="20230923 21:11:36.395" endtime="20230923 21:11:47.312"/>
+</suite>
+<status status="PASS" starttime="20230923 21:11:36.384" endtime="20230923 21:11:47.316"/>
+</suite>
+<status status="PASS" starttime="20230923 21:11:36.196" endtime="20230923 21:11:47.320"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="modeloRobot">modeloRobot</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Aula1-Robot">modeloRobot.Aula1-Robot</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Ecommerce">modeloRobot.Aula1-Robot.Ecommerce</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

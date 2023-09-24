@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230923 21:11:33.564" rpa="false" schemaversion="4">
+<suite id="s1" name="Ecommerce" source="c:\modeloRobot\aula1-robot\ecommerce.robot">
+<test id="s1-t1" name="Cenário 1: Preencher login e clicar no botão se Login e adicionar itens no carrinho" line="37">
+<kw name="Dado que eu acesso o site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://www.saucedemo.com/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230923 21:11:34.066" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230923 21:11:34.065" endtime="20230923 21:11:37.009"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:34.064" endtime="20230923 21:11:37.010"/>
+</kw>
+<kw name="E preencher os campos de login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${user_name}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:37.019" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230923 21:11:37.018" endtime="20230923 21:11:37.337"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:37.340" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20230923 21:11:37.337" endtime="20230923 21:11:37.567"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:37.017" endtime="20230923 21:11:37.568"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230923 21:11:39.569" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230923 21:11:37.568" endtime="20230923 21:11:39.569"/>
+</kw>
+<kw name="E clicar no botão de login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:39.576" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230923 21:11:39.574" endtime="20230923 21:11:39.826"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:39.573" endtime="20230923 21:11:39.827"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230923 21:11:41.854" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230923 21:11:39.852" endtime="20230923 21:11:41.857"/>
+</kw>
+<kw name="E adicionar itens no carrinho de compras">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${mochila}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:41.866" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230923 21:11:41.863" endtime="20230923 21:11:41.977"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${lanterna}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:41.978" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20230923 21:11:41.977" endtime="20230923 21:11:42.076"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${tshirt}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:42.078" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20230923 21:11:42.076" endtime="20230923 21:11:42.163"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:42.165" level="INFO">Clicking element 'class:shopping_cart_link'.</msg>
+<status status="PASS" starttime="20230923 21:11:42.163" endtime="20230923 21:11:42.264"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:41.861" endtime="20230923 21:11:42.264"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230923 21:11:44.267" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230923 21:11:42.266" endtime="20230923 21:11:44.268"/>
+</kw>
+<kw name="E clicar em Checkout">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${checkout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230923 21:11:44.278" level="INFO">Clicking element 'id:checkout'.</msg>
+<status status="PASS" starttime="20230923 21:11:44.274" endtime="20230923 21:11:44.455"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:44.270" endtime="20230923 21:11:44.456"/>
+</kw>
+<status status="PASS" starttime="20230923 21:11:34.060" endtime="20230923 21:11:44.459"/>
+</test>
+<status status="PASS" starttime="20230923 21:11:33.571" endtime="20230923 21:11:44.462"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ecommerce">Ecommerce</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
